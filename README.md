@@ -10,9 +10,13 @@ By José Pagán
 
 ## Background
 The US Building and Engineering Code is comprised of several technical documents that regulate the work of over 500,000 engineers and architects in the United States at the Federal level.  The Code’s most important document is the ACI318-14, a 524-page technical document.  Currently, if an engineer or architect wants to find a section or table in the ACI-318-14, he needs to manually search the 524 pages of the document himself.  This task is typically done by downloading a pdf version of the code from the internet and manually searching the document with a simple word search tool.  Once found, the relevant information needs to be extracted manually.  This task is very tedious and time-consuming, as technical words tend to be repeated hundreds of times within the document.
+
 The Constructment application is a search engine that assists architects and engineers when searching technical engineering documents.  Regular search engines cannot identify subtle differences in technical terms as they tend to group similar words together and use algorithms based on simple word count.  They provide a lot of irrelevant information and waste the engineer and architect’s time parsing through the search results.
+
 My contribution to this project is to expand the application’s machine learning capabilities to include tables as possible answers for user questions.  Since there are over 250 tables throughout the Code, this additional functionality significantly can reduce the time spent by architects and engineers searching for tables in the Code.  The format, size, and content of these tables varies significantly making the tables difficult to locate and extract manually.
+
 My section of the project uses natural language processing and artificial intelligence to generate thousands of sentence-like text sequences from the contents of each table in the ACI-318-14.  The sequences are then compared with the surrounding text, based on several similarity measures, and the top 10 sentences are selected.  Similarity measures used include frequency and number of words per sentence.  These sentences are then fed into the application’s retriever model, to appropriately identify sequences as possible answers to user questions and point the user to the corresponding table.
+
 The data for the project is comprised of the tables and surrounding text in the Building Code Requirements for Structural Concrete (ACI 318-14) and the Commentary on Building Code Requirements for Structural Concrete (ACI 318R-14) of 2014.
 
 ## Jupyter Notebooks
